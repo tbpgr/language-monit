@@ -1,0 +1,100 @@
+'name': 'Monit'
+'scopeName': 'source.monit'
+'fileTypes': [
+  'monitrc'
+]
+'patterns': [
+  {
+    'comment': 'comment'
+    'begin': '^.*(#.*)'
+    'beginCaptures':
+      '1':
+        'name': 'comment'
+    'end': '\\n'
+  },
+  {
+    'comment': 'numeric'
+    'match': '\\b([0-9]+)\\b'
+    'name': 'constant.numeric'
+  },
+  {
+    'comment': 'character brace'
+    'match': '\\{|\\}'
+    'name': 'keyword.control'
+  },
+  {
+    'comment': 'character paren'
+    'match': '\\(|\\)'
+    'name': 'keyword.control'
+  },
+  {
+    'comment': 'email'
+    'match': '[\\d\\w_\\-.]+@[\\d\\w_\\-.]+'
+    'name': 'markup.link'
+  },
+  {
+    'comment': 'quoted'
+    'match': '\\\'(.*)\\\''
+    'name': 'string'
+  },
+  {
+    'comment': 'double quoted'
+    'match': '\"(.*)\"'
+    'name': 'string'
+  },
+  {
+    'comment': 'control'
+    'match': '\\b(if|then|else|and)\\b'
+    'name': 'keyword.control'
+  },
+  {
+    'comment': 'operator'
+    'match': '\\b(&gt;|&lt;)\\b'
+    'name': 'keyword.operator'
+  },
+  {
+    'comment': 'function'
+    'match': '\\b(set|check|include)\\b'
+    'name': 'support.function'
+  },
+  {
+    'comment': 'monit dsl'
+    'match': '(?<!\\.)\\b(pidfile|path|alert|noalert|system|logfile|group|failed|port|checksum|start|stop|restart|program|daemon|space|usage|timeout|restarts|within|cycles|depends|type|proto|protocol|logfile|syslog|address|enable|disable|pemfile|allow|read-only|check|init|count|pidfile|statefile|group|start|stop|uid|gid|connection|port|portnumber|unix|unixsocket|mail-format|resource|expect|send|mailserver|every|mode|active|passive|manual|depends|host|default|request|cpu|mem|totalmem|children|loadavg|timestamp|changed|second|seconds|minute|minutes|hour|hours|day|days|inode|pid|ppid|perm|permission|icmp|process|file|directory|filesystem|size|action|unmonitor|rdate|rsync|data|invalid|exec|nonexist|policy|reminder|instance|eventqueue|basedir|slot|slots|system|idfile|gps|radius|secret|target|maxforward|hostheader|url)\\b(?![?!])'
+    'name': 'entity.name.class'
+  },
+  {
+    'comment': 'file path'
+    'match': '\\/.*'
+    'name': 'markup.link'
+  },
+  {
+    'comment': 'url'
+    'match': '[a-z]+:\\/.+'
+    'name': 'markup.link'
+  },
+  {
+    'comment': 'checksum'
+    'match': '\\b(md5|sha1)\\b'
+    'name': 'entity.other.attribute-name'
+  },
+  {
+    'comment': 'socket'
+    'match': '\\b(tcp|udp|tcpssl)\\b'
+    'name': 'entity.other.attribute-name'
+  },
+  {
+    'comment': 'protocol'
+    'match': '(?<!\\.)\\b(https|ssl|http|ftp|smtp|pop|ntp3|nntp|imap|clamav|ssh|dwp|ldap2|ldap3|tns)\\b(?![?!])'
+    'name': 'entity.other.attribute-name'
+  },
+  {
+    'comment': 'variable other'
+    'match': 'a-zA-Z0-9\\-\\.+'
+    'name': 'variable.parameter'
+  },
+  {
+    'comment': 'variable language'
+    'match': '(?<!\\.)\\b(device|with|times|for|cycles)\\b(?![?!])'
+    'name': 'variable.interpolation'
+  },
+]

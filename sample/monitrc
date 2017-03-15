@@ -1,0 +1,26 @@
+check process mysql with pidfile /var/run/mysqld/mysqld.pid
+  start program = "/etc/init.d/mysql start"
+  stop program = "/etc/init.d/mysql stop"
+  # test
+  test = 11
+  set ssl options {
+    verify: enable
+  }
+  {aafdfd}
+  (test)
+  hoge "test"
+"ttset"
+https: test
+https: test
+http ssl ssl htto
+from: hoge@example.com
+'tests' 123
+if failed <test> then exec "/usr/local/bin/sms.sh" else hoge
+hoge > hige
+set hoge = 12
+include /hoge/hoge.text
+https://github.com
+http://github.com
+IF FAILED md5 CHECKSUM 12131 THEN action
+IF FAILED sha1 CHECKSUM 23243 THEN action
+host 127.0.0.1 port 1812 type udp protocol radius

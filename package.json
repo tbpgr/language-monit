@@ -1,0 +1,11 @@
+{
+  "name": "language-monit",
+  "version": "0.1.0",
+  "description": "Monit language support in Atom",
+  "repository": "https://github.com/tbpgr/language-monit",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}
